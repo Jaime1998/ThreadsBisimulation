@@ -1,0 +1,32 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x745b5a5d, pid=328340, tid=0x00005310
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_311-b11) (build 1.8.0_311-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x165a5d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp 46 2b c8
+0x745b5a5d:   c7 01 00 00 00 00 3b 35 a4 9e 7b 74 7e e5 8b 7d
+0x745b5a6d:   10 8b 45 08 53 50 ff 75 f0 8d 45 f4 83 ec 08 8b 
+
+
+Register to memory mapping:
+
+EAX=0x00003000 is an unknown value
+EBX=0x1561ec00 is a thread
+ECX=0x1789c8f0 is pointing into the stack for thread: 0x1561ec00
+EDX=0x00000006 is an unknown value
+ESP=0x1789f8fc is pointing into the stack for thread: 0x1561ec00
+EBP=0x1789f998 is pointing into the stack for thread: 0x1561ec00
+ESI=0x00000004 is an unknown value
+EDI=0x1789f8f0 is pointing into the stack for thread: 0x1561ec00
+
+
+Stack: [0x17850000,0x178a0000],  sp=0x1789f8fc,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)

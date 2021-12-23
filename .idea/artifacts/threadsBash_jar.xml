@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="threadsBash:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/threadsBash_jar</output-path>
+    <root id="archive" name="threadsBash.jar">
+      <element id="module-output" name="threadsBash" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../commons-lang3-3.12.0/commons-lang3-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../commons-text-1.9/commons-text-1.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

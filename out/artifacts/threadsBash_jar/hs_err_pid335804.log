@@ -1,0 +1,36 @@
+
+[error occurred during error reporting (printing fatal error message), id 0xc00000fd]
+
+#
+#  Internal Error (os_windows.cpp:3990), pid=335804, tid=0x00022dec
+#  guarantee(return_page != NULL) failed: Commit Failed for polling page
+#
+# JRE version:  (8.0_311-b11) (build )
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode, sharing windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x02c10000,0x02c60000],  sp=0x02c5e050,  free space=312k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1b8a8e]
+V  [jvm.dll+0x1d4435]
+C  [KERNELBASE.dll+0x1f5732]
+C  [ntdll.dll+0x68b91]
+C  [ntdll.dll+0x68acd]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+Dynamic libraries:

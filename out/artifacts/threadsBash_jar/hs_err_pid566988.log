@@ -1,0 +1,57 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x745b5a5d, pid=566988, tid=0x0008f024
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_311-b11) (build 1.8.0_311-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x165a5d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x15256400):  JavaThread "Thread-49" [_thread_in_vm, id=585764, stack(0x16fa0000,0x16ff0000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x16fec7d0
+
+Registers:
+EAX=0x00003000, EBX=0x15256400, ECX=0x16fec7d0, EDX=0x00000006
+ESP=0x16fef7dc, EBP=0x16fef878, ESI=0x00000004, EDI=0x16fef7d0
+EIP=0x745b5a5d, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x16fef7dc)
+0x16fef7dc:   15256400 16fef944 152462c0 146b4a88
+0x16fef7ec:   146b4a88 146b3110 15256400 146b3110
+0x16fef7fc:   15256400 15256400 16fef7f0 15262df8
+0x16fef80c:   00000005 15256400 16fef878 744d9d4f
+0x16fef81c:   146b4a88 146b4a88 146b3110 15256400
+0x16fef82c:   146b3110 15256400 00000005 744d9d5f
+0x16fef83c:   16fef9d4 16fef884 152462c0 0087cb64
+0x16fef84c:   0087cb58 1526a400 74620bd7 000008e0 
+
+Instructions: (pc=0x745b5a5d)
+0x745b5a3d:   45 e8 39 35 a4 9e 7b 74 7c 27 8b f8 8d a4 24 00
+0x745b5a4d:   00 00 00 e8 7b ce 06 00 0f af c6 8b cf 46 2b c8
+0x745b5a5d:   c7 01 00 00 00 00 3b 35 a4 9e 7b 74 7e e5 8b 7d
+0x745b5a6d:   10 8b 45 08 53 50 ff 75 f0 8d 45 f4 83 ec 08 8b 
+
+
+Register to memory mapping:
+
+EAX=0x00003000 is an unknown value
+EBX=0x15256400 is a thread
+ECX=0x16fec7d0 is pointing into the stack for thread: 0x15256400
+EDX=0x00000006 is an unknown value
+ESP=0x16fef7dc is pointing into the stack for thread: 0x15256400
+EBP=0x16fef878 is pointing into the stack for thread: 0x15256400
+ESI=0x00000004 is an unknown value
+EDI=0x16fef7d0 is pointing into the stack for thread: 0x15256400
+
+
+Stack: [0x16fa0000,0x16ff0000],  sp=0x16fef7dc,  free space=317k

@@ -1,0 +1,575 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_windows.hpp:133), pid=22748, tid=0x00005e8c
+#  guarantee(_ParkHandle != NULL) failed: invariant
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_311-b11) (build 1.8.0_311-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00ab3400):  JavaThread "main" [_thread_in_vm, id=24204, stack(0x00dd0000,0x00e20000)]
+
+Stack: [0x00dd0000,0x00e20000],  sp=0x00e1f83c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1b8a8e]
+V  [jvm.dll+0x1b0ed1]
+V  [jvm.dll+0x16fbb8]
+V  [jvm.dll+0x1842a6]
+V  [jvm.dll+0x112d3f]
+j  java.lang.Thread.start0()V+0
+j  java.lang.Thread.start()V+26
+j  main.Main.main([Ljava/lang/String;)V+204
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x165b34]
+V  [jvm.dll+0x2369bb]
+V  [jvm.dll+0x1656da]
+V  [jvm.dll+0xebf85]
+V  [jvm.dll+0xe4806]
+C  [java.exe+0x2314]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.Thread.start0()V+0
+j  java.lang.Thread.start()V+26
+j  main.Main.main([Ljava/lang/String;)V+204
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x1b9dc400 JavaThread "Thread-309" [_thread_blocked, id=125688, stack(0x20c40000,0x20c90000)]
+  0x1b9d5400 JavaThread "Thread-308" [_thread_blocked, id=125668, stack(0x20bb0000,0x20c00000)]
+  0x1b9d2c00 JavaThread "Thread-307" [_thread_blocked, id=125660, stack(0x20b20000,0x20b70000)]
+  0x1b9d4800 JavaThread "Thread-306" [_thread_blocked, id=125408, stack(0x20a90000,0x20ae0000)]
+  0x1b9d9c00 JavaThread "Thread-305" [_thread_blocked, id=124820, stack(0x20a00000,0x20a50000)]
+  0x1b9d2800 JavaThread "Thread-304" [_thread_blocked, id=124784, stack(0x20970000,0x209c0000)]
+  0x1b9d9400 JavaThread "Thread-303" [_thread_blocked, id=124068, stack(0x208e0000,0x20930000)]
+  0x1b9d8400 JavaThread "Thread-302" [_thread_blocked, id=124020, stack(0x20850000,0x208a0000)]
+  0x1b9d7c00 JavaThread "Thread-301" [_thread_blocked, id=123988, stack(0x207c0000,0x20810000)]
+  0x1b9d4c00 JavaThread "Thread-300" [_thread_blocked, id=123972, stack(0x20730000,0x20780000)]
+  0x1b9d4000 JavaThread "Thread-299" [_thread_blocked, id=123956, stack(0x206a0000,0x206f0000)]
+  0x1b9d5c00 JavaThread "Thread-298" [_thread_blocked, id=123928, stack(0x20610000,0x20660000)]
+  0x1b9d7400 JavaThread "Thread-297" [_thread_blocked, id=123672, stack(0x20580000,0x205d0000)]
+  0x1b9d8800 JavaThread "Thread-296" [_thread_blocked, id=123060, stack(0x204f0000,0x20540000)]
+  0x1b9d7000 JavaThread "Thread-295" [_thread_blocked, id=122372, stack(0x20460000,0x204b0000)]
+  0x1b9d2000 JavaThread "Thread-294" [_thread_blocked, id=122212, stack(0x203d0000,0x20420000)]
+  0x1b9d6000 JavaThread "Thread-293" [_thread_blocked, id=122208, stack(0x20340000,0x20390000)]
+  0x1b9d3c00 JavaThread "Thread-292" [_thread_blocked, id=122192, stack(0x202b0000,0x20300000)]
+  0x1b9d9000 JavaThread "Thread-291" [_thread_blocked, id=121708, stack(0x20220000,0x20270000)]
+  0x1b9d3400 JavaThread "Thread-290" [_thread_blocked, id=121684, stack(0x20190000,0x201e0000)]
+  0x1b9d6800 JavaThread "Thread-289" [_thread_blocked, id=121672, stack(0x20100000,0x20150000)]
+  0x1b99d000 JavaThread "Thread-288" [_thread_blocked, id=121576, stack(0x20070000,0x200c0000)]
+  0x1b99c800 JavaThread "Thread-287" [_thread_blocked, id=120732, stack(0x1ffe0000,0x20030000)]
+  0x1b99c400 JavaThread "Thread-286" [_thread_blocked, id=120684, stack(0x1ff50000,0x1ffa0000)]
+  0x1b99d800 JavaThread "Thread-285" [_thread_blocked, id=120500, stack(0x1fec0000,0x1ff10000)]
+  0x1b99e800 JavaThread "Thread-284" [_thread_blocked, id=120292, stack(0x1fe30000,0x1fe80000)]
+  0x1b99dc00 JavaThread "Thread-283" [_thread_blocked, id=120280, stack(0x1fda0000,0x1fdf0000)]
+  0x1b99e400 JavaThread "Thread-282" [_thread_blocked, id=120040, stack(0x1fd10000,0x1fd60000)]
+  0x1b99bc00 JavaThread "Thread-281" [_thread_blocked, id=120032, stack(0x1fc80000,0x1fcd0000)]
+  0x1b99b400 JavaThread "Thread-280" [_thread_blocked, id=119876, stack(0x1fbf0000,0x1fc40000)]
+  0x1b998800 JavaThread "Thread-279" [_thread_blocked, id=119840, stack(0x1fb60000,0x1fbb0000)]
+  0x1b999000 JavaThread "Thread-278" [_thread_blocked, id=119824, stack(0x1fad0000,0x1fb20000)]
+  0x1b99a800 JavaThread "Thread-277" [_thread_blocked, id=119792, stack(0x1fa40000,0x1fa90000)]
+  0x1b99b000 JavaThread "Thread-276" [_thread_blocked, id=119776, stack(0x1f9b0000,0x1fa00000)]
+  0x1b993400 JavaThread "Thread-275" [_thread_blocked, id=119748, stack(0x1f920000,0x1f970000)]
+  0x1b99a000 JavaThread "Thread-274" [_thread_blocked, id=119732, stack(0x1f890000,0x1f8e0000)]
+  0x1b999c00 JavaThread "Thread-273" [_thread_blocked, id=119716, stack(0x1f800000,0x1f850000)]
+  0x1b999400 JavaThread "Thread-272" [_thread_blocked, id=119508, stack(0x1f770000,0x1f7c0000)]
+  0x1b997c00 JavaThread "Thread-271" [_thread_blocked, id=119492, stack(0x1f6e0000,0x1f730000)]
+  0x1b997400 JavaThread "Thread-270" [_thread_blocked, id=119476, stack(0x1f650000,0x1f6a0000)]
+  0x1b996c00 JavaThread "Thread-269" [_thread_blocked, id=119456, stack(0x1f5c0000,0x1f610000)]
+  0x1b998000 JavaThread "Thread-268" [_thread_blocked, id=119440, stack(0x1f530000,0x1f580000)]
+  0x1b991800 JavaThread "Thread-267" [_thread_blocked, id=119432, stack(0x1f4a0000,0x1f4f0000)]
+  0x1b996800 JavaThread "Thread-266" [_thread_blocked, id=119408, stack(0x1f410000,0x1f460000)]
+  0x1b992000 JavaThread "Thread-265" [_thread_blocked, id=119280, stack(0x1f380000,0x1f3d0000)]
+  0x1b98f000 JavaThread "Thread-264" [_thread_blocked, id=119260, stack(0x1f2f0000,0x1f340000)]
+  0x1b992400 JavaThread "Thread-263" [_thread_blocked, id=118440, stack(0x1f260000,0x1f2b0000)]
+  0x1b991400 JavaThread "Thread-262" [_thread_blocked, id=118432, stack(0x1f1d0000,0x1f220000)]
+  0x1b994c00 JavaThread "Thread-261" [_thread_blocked, id=118420, stack(0x1f140000,0x1f190000)]
+  0x1b992c00 JavaThread "Thread-260" [_thread_blocked, id=118408, stack(0x1f0b0000,0x1f100000)]
+  0x1b994800 JavaThread "Thread-259" [_thread_blocked, id=118396, stack(0x1f020000,0x1f070000)]
+  0x1b990c00 JavaThread "Thread-258" [_thread_blocked, id=118388, stack(0x1ef90000,0x1efe0000)]
+  0x1b990000 JavaThread "Thread-257" [_thread_blocked, id=118336, stack(0x1ef00000,0x1ef50000)]
+  0x1b996000 JavaThread "Thread-256" [_thread_blocked, id=118328, stack(0x1ee70000,0x1eec0000)]
+  0x1b995400 JavaThread "Thread-255" [_thread_blocked, id=117544, stack(0x1ede0000,0x1ee30000)]
+  0x1b990400 JavaThread "Thread-254" [_thread_blocked, id=117532, stack(0x1ed50000,0x1eda0000)]
+  0x1b994000 JavaThread "Thread-253" [_thread_blocked, id=117520, stack(0x1ecc0000,0x1ed10000)]
+  0x1b993800 JavaThread "Thread-252" [_thread_blocked, id=117504, stack(0x1ec30000,0x1ec80000)]
+  0x1b995c00 JavaThread "Thread-251" [_thread_blocked, id=117496, stack(0x1eba0000,0x1ebf0000)]
+  0x1b98f800 JavaThread "Thread-250" [_thread_blocked, id=117484, stack(0x1eb10000,0x1eb60000)]
+  0x1b969800 JavaThread "Thread-249" [_thread_blocked, id=117012, stack(0x1ea80000,0x1ead0000)]
+  0x1b969000 JavaThread "Thread-248" [_thread_blocked, id=116764, stack(0x1e9f0000,0x1ea40000)]
+  0x1b96b800 JavaThread "Thread-247" [_thread_blocked, id=116440, stack(0x1e960000,0x1e9b0000)]
+  0x1b96b400 JavaThread "Thread-246" [_thread_blocked, id=116424, stack(0x1e8d0000,0x1e920000)]
+  0x1b96ac00 JavaThread "Thread-245" [_thread_blocked, id=116416, stack(0x1e840000,0x1e890000)]
+  0x1b96a000 JavaThread "Thread-244" [_thread_blocked, id=116412, stack(0x1e5b0000,0x1e600000)]
+  0x1b96a400 JavaThread "Thread-243" [_thread_blocked, id=116076, stack(0x1e520000,0x1e570000)]
+  0x1b968c00 JavaThread "Thread-242" [_thread_blocked, id=115620, stack(0x1e490000,0x1e4e0000)]
+  0x1b968400 JavaThread "Thread-241" [_thread_blocked, id=115612, stack(0x1e400000,0x1e450000)]
+  0x1b968000 JavaThread "Thread-240" [_thread_blocked, id=115600, stack(0x1e370000,0x1e3c0000)]
+  0x1b967800 JavaThread "Thread-239" [_thread_blocked, id=115588, stack(0x1e2e0000,0x1e330000)]
+  0x1b967000 JavaThread "Thread-238" [_thread_blocked, id=115460, stack(0x1e250000,0x1e2a0000)]
+  0x1b966c00 JavaThread "Thread-237" [_thread_blocked, id=115452, stack(0x1e1c0000,0x1e210000)]
+  0x1b95f400 JavaThread "Thread-236" [_thread_blocked, id=115444, stack(0x1e130000,0x1e180000)]
+  0x1b966400 JavaThread "Thread-235" [_thread_blocked, id=115436, stack(0x1e0a0000,0x1e0f0000)]
+  0x1b965c00 JavaThread "Thread-234" [_thread_blocked, id=115428, stack(0x1e010000,0x1e060000)]
+  0x1b965800 JavaThread "Thread-233" [_thread_blocked, id=115420, stack(0x1df80000,0x1dfd0000)]
+  0x1b95e000 JavaThread "Thread-232" [_thread_blocked, id=115416, stack(0x1def0000,0x1df40000)]
+  0x1b965000 JavaThread "Thread-231" [_thread_blocked, id=115408, stack(0x1de60000,0x1deb0000)]
+  0x1b95dc00 JavaThread "Thread-230" [_thread_blocked, id=115400, stack(0x1ddd0000,0x1de20000)]
+  0x1b964c00 JavaThread "Thread-229" [_thread_blocked, id=115392, stack(0x1dd40000,0x1dd90000)]
+  0x1b964400 JavaThread "Thread-228" [_thread_blocked, id=115384, stack(0x1dcb0000,0x1dd00000)]
+  0x1b963c00 JavaThread "Thread-227" [_thread_blocked, id=115376, stack(0x1dc20000,0x1dc70000)]
+  0x1b961c00 JavaThread "Thread-226" [_thread_blocked, id=115372, stack(0x1db90000,0x1dbe0000)]
+  0x1b961400 JavaThread "Thread-225" [_thread_blocked, id=115364, stack(0x1db00000,0x1db50000)]
+  0x1b963800 JavaThread "Thread-224" [_thread_blocked, id=115360, stack(0x1da70000,0x1dac0000)]
+  0x1b95f000 JavaThread "Thread-223" [_thread_blocked, id=115248, stack(0x1d9e0000,0x1da30000)]
+  0x1b960800 JavaThread "Thread-222" [_thread_blocked, id=115244, stack(0x1d950000,0x1d9a0000)]
+  0x1b95fc00 JavaThread "Thread-221" [_thread_blocked, id=115240, stack(0x1d8c0000,0x1d910000)]
+  0x1b95c800 JavaThread "Thread-220" [_thread_blocked, id=115004, stack(0x1d830000,0x1d880000)]
+  0x1b961000 JavaThread "Thread-219" [_thread_blocked, id=114996, stack(0x1d7a0000,0x1d7f0000)]
+  0x1b95d400 JavaThread "Thread-218" [_thread_blocked, id=114976, stack(0x1d710000,0x1d760000)]
+  0x1b95c000 JavaThread "Thread-217" [_thread_blocked, id=114964, stack(0x1d680000,0x1d6d0000)]
+  0x1b963000 JavaThread "Thread-216" [_thread_blocked, id=114952, stack(0x1d5f0000,0x1d640000)]
+  0x1b95cc00 JavaThread "Thread-215" [_thread_blocked, id=114944, stack(0x1d560000,0x1d5b0000)]
+  0x1b962400 JavaThread "Thread-214" [_thread_blocked, id=114932, stack(0x1d4d0000,0x1d520000)]
+  0x1b962800 JavaThread "Thread-213" [_thread_blocked, id=114924, stack(0x1d440000,0x1d490000)]
+  0x1b95e800 JavaThread "Thread-212" [_thread_blocked, id=114712, stack(0x1d3b0000,0x1d400000)]
+  0x1b960400 JavaThread "Thread-211" [_thread_blocked, id=114700, stack(0x1d320000,0x1d370000)]
+  0x154b6400 JavaThread "Thread-210" [_thread_blocked, id=114484, stack(0x1d290000,0x1d2e0000)]
+  0x154b8c00 JavaThread "Thread-209" [_thread_blocked, id=114468, stack(0x1d200000,0x1d250000)]
+  0x154b7800 JavaThread "Thread-208" [_thread_blocked, id=114464, stack(0x1d170000,0x1d1c0000)]
+  0x154b6c00 JavaThread "Thread-207" [_thread_blocked, id=114456, stack(0x1d0e0000,0x1d130000)]
+  0x154b7000 JavaThread "Thread-206" [_thread_blocked, id=114452, stack(0x1d050000,0x1d0a0000)]
+  0x154b8400 JavaThread "Thread-205" [_thread_blocked, id=113728, stack(0x1cfc0000,0x1d010000)]
+  0x154b7c00 JavaThread "Thread-204" [_thread_blocked, id=113724, stack(0x1cf30000,0x1cf80000)]
+  0x154b5800 JavaThread "Thread-203" [_thread_blocked, id=113716, stack(0x1cea0000,0x1cef0000)]
+  0x154b4400 JavaThread "Thread-202" [_thread_blocked, id=113612, stack(0x1ce10000,0x1ce60000)]
+  0x154b5000 JavaThread "Thread-201" [_thread_blocked, id=113508, stack(0x1cd80000,0x1cdd0000)]
+  0x154b5c00 JavaThread "Thread-200" [_thread_blocked, id=113504, stack(0x1ccf0000,0x1cd40000)]
+  0x154b3c00 JavaThread "Thread-199" [_thread_blocked, id=113496, stack(0x1cc60000,0x1ccb0000)]
+  0x154b3400 JavaThread "Thread-198" [_thread_blocked, id=113492, stack(0x1cbd0000,0x1cc20000)]
+  0x154b4800 JavaThread "Thread-197" [_thread_blocked, id=113484, stack(0x1cb40000,0x1cb90000)]
+  0x154ac000 JavaThread "Thread-196" [_thread_blocked, id=113476, stack(0x1cab0000,0x1cb00000)]
+  0x154b3000 JavaThread "Thread-195" [_thread_blocked, id=113088, stack(0x1ca20000,0x1ca70000)]
+  0x154ab800 JavaThread "Thread-194" [_thread_blocked, id=113080, stack(0x1c990000,0x1c9e0000)]
+  0x154b2800 JavaThread "Thread-193" [_thread_blocked, id=113076, stack(0x1c900000,0x1c950000)]
+  0x154b2400 JavaThread "Thread-192" [_thread_blocked, id=113064, stack(0x1c870000,0x1c8c0000)]
+  0x154b1c00 JavaThread "Thread-191" [_thread_blocked, id=113016, stack(0x1c7e0000,0x1c830000)]
+  0x154b1400 JavaThread "Thread-190" [_thread_blocked, id=112432, stack(0x1c750000,0x1c7a0000)]
+  0x154b0800 JavaThread "Thread-189" [_thread_blocked, id=112420, stack(0x1c6c0000,0x1c710000)]
+  0x154aec00 JavaThread "Thread-188" [_thread_blocked, id=112416, stack(0x1c630000,0x1c680000)]
+  0x154b1000 JavaThread "Thread-187" [_thread_blocked, id=112408, stack(0x1c5a0000,0x1c5f0000)]
+  0x154ad400 JavaThread "Thread-186" [_thread_blocked, id=112396, stack(0x1c510000,0x1c560000)]
+  0x154ae800 JavaThread "Thread-185" [_thread_blocked, id=112384, stack(0x1c480000,0x1c4d0000)]
+  0x154b0000 JavaThread "Thread-184" [_thread_blocked, id=111524, stack(0x1c3f0000,0x1c440000)]
+  0x154ae000 JavaThread "Thread-183" [_thread_blocked, id=111172, stack(0x1c360000,0x1c3b0000)]
+  0x154a9400 JavaThread "Thread-182" [_thread_blocked, id=111056, stack(0x1c2d0000,0x1c320000)]
+  0x154aa800 JavaThread "Thread-181" [_thread_blocked, id=111044, stack(0x1c240000,0x1c290000)]
+  0x154a9800 JavaThread "Thread-180" [_thread_blocked, id=111032, stack(0x1c1b0000,0x1c200000)]
+  0x154aa000 JavaThread "Thread-179" [_thread_blocked, id=111024, stack(0x1c120000,0x1c170000)]
+  0x154afc00 JavaThread "Thread-178" [_thread_blocked, id=111020, stack(0x1c090000,0x1c0e0000)]
+  0x154adc00 JavaThread "Thread-177" [_thread_blocked, id=111012, stack(0x1c000000,0x1c050000)]
+  0x154ab400 JavaThread "Thread-176" [_thread_blocked, id=111000, stack(0x1bf70000,0x1bfc0000)]
+  0x154af400 JavaThread "Thread-175" [_thread_blocked, id=110992, stack(0x1bee0000,0x1bf30000)]
+  0x154aac00 JavaThread "Thread-174" [_thread_blocked, id=110980, stack(0x1be50000,0x1bea0000)]
+  0x154acc00 JavaThread "Thread-173" [_thread_blocked, id=110872, stack(0x1bdc0000,0x1be10000)]
+  0x154ac800 JavaThread "Thread-172" [_thread_blocked, id=109952, stack(0x1bd30000,0x1bd80000)]
+  0x15482c00 JavaThread "Thread-171" [_thread_blocked, id=109936, stack(0x1b8a0000,0x1b8f0000)]
+  0x15482800 JavaThread "Thread-170" [_thread_blocked, id=109916, stack(0x1b810000,0x1b860000)]
+  0x15482000 JavaThread "Thread-169" [_thread_blocked, id=109672, stack(0x1b780000,0x1b7d0000)]
+  0x15481400 JavaThread "Thread-168" [_thread_blocked, id=109640, stack(0x1b6f0000,0x1b740000)]
+  0x15485c00 JavaThread "Thread-167" [_thread_blocked, id=109596, stack(0x1b660000,0x1b6b0000)]
+  0x15487400 JavaThread "Thread-166" [_thread_blocked, id=109588, stack(0x1b5d0000,0x1b620000)]
+  0x15486000 JavaThread "Thread-165" [_thread_blocked, id=108624, stack(0x1b540000,0x1b590000)]
+  0x15486800 JavaThread "Thread-164" [_thread_blocked, id=108164, stack(0x1b4b0000,0x1b500000)]
+  0x15483800 JavaThread "Thread-163" [_thread_blocked, id=108160, stack(0x1b420000,0x1b470000)]
+  0x15484000 JavaThread "Thread-162" [_thread_blocked, id=108156, stack(0x1b390000,0x1b3e0000)]
+  0x15480c00 JavaThread "Thread-161" [_thread_blocked, id=107888, stack(0x1b300000,0x1b350000)]
+  0x15485400 JavaThread "Thread-160" [_thread_blocked, id=107876, stack(0x1b270000,0x1b2c0000)]
+  0x15484800 JavaThread "Thread-159" [_thread_blocked, id=107860, stack(0x1b1e0000,0x1b230000)]
+  0x15483400 JavaThread "Thread-158" [_thread_blocked, id=107852, stack(0x1b150000,0x1b1a0000)]
+  0x15480000 JavaThread "Thread-157" [_thread_blocked, id=107672, stack(0x1b0c0000,0x1b110000)]
+  0x15480400 JavaThread "Thread-156" [_thread_blocked, id=107272, stack(0x1b030000,0x1b080000)]
+  0x15486c00 JavaThread "Thread-155" [_thread_blocked, id=107264, stack(0x1afa0000,0x1aff0000)]
+  0x15484c00 JavaThread "Thread-154" [_thread_blocked, id=107132, stack(0x1af10000,0x1af60000)]
+  0x15481800 JavaThread "Thread-153" [_thread_blocked, id=107124, stack(0x1ae80000,0x1aed0000)]
+  0x15456800 JavaThread "Thread-152" [_thread_blocked, id=107112, stack(0x1adf0000,0x1ae40000)]
+  0x15455400 JavaThread "Thread-151" [_thread_blocked, id=105164, stack(0x1ad60000,0x1adb0000)]
+  0x15456400 JavaThread "Thread-150" [_thread_blocked, id=105156, stack(0x1acd0000,0x1ad20000)]
+  0x15455000 JavaThread "Thread-149" [_thread_blocked, id=104756, stack(0x1ac40000,0x1ac90000)]
+  0x15454000 JavaThread "Thread-148" [_thread_blocked, id=104748, stack(0x1abb0000,0x1ac00000)]
+  0x15458400 JavaThread "Thread-147" [_thread_blocked, id=104732, stack(0x1ab20000,0x1ab70000)]
+  0x15450c00 JavaThread "Thread-146" [_thread_blocked, id=104720, stack(0x1aa90000,0x1aae0000)]
+  0x15453400 JavaThread "Thread-145" [_thread_blocked, id=104704, stack(0x1aa00000,0x1aa50000)]
+  0x15455c00 JavaThread "Thread-144" [_thread_blocked, id=104680, stack(0x1a970000,0x1a9c0000)]
+  0x15457c00 JavaThread "Thread-143" [_thread_blocked, id=104672, stack(0x1a8e0000,0x1a930000)]
+  0x15454800 JavaThread "Thread-142" [_thread_blocked, id=104652, stack(0x1a850000,0x1a8a0000)]
+  0x15453000 JavaThread "Thread-141" [_thread_blocked, id=104636, stack(0x1a7c0000,0x1a810000)]
+  0x15452800 JavaThread "Thread-140" [_thread_blocked, id=104624, stack(0x1a730000,0x1a780000)]
+  0x15451c00 JavaThread "Thread-139" [_thread_blocked, id=104620, stack(0x1a6a0000,0x1a6f0000)]
+  0x15457400 JavaThread "Thread-138" [_thread_blocked, id=104616, stack(0x1a610000,0x1a660000)]
+  0x15451400 JavaThread "Thread-137" [_thread_blocked, id=104612, stack(0x1a580000,0x1a5d0000)]
+  0x15453c00 JavaThread "Thread-136" [_thread_blocked, id=104604, stack(0x1a4f0000,0x1a540000)]
+  0x15452000 JavaThread "Thread-135" [_thread_blocked, id=104600, stack(0x1a460000,0x1a4b0000)]
+  0x15457000 JavaThread "Thread-134" [_thread_blocked, id=104592, stack(0x1a3d0000,0x1a420000)]
+  0x1543cc00 JavaThread "Thread-133" [_thread_blocked, id=104580, stack(0x1a340000,0x1a390000)]
+  0x15435400 JavaThread "Thread-132" [_thread_blocked, id=104288, stack(0x1a2b0000,0x1a300000)]
+  0x1543c400 JavaThread "Thread-131" [_thread_blocked, id=104212, stack(0x1a220000,0x1a270000)]
+  0x1543a400 JavaThread "Thread-130" [_thread_blocked, id=104200, stack(0x1a190000,0x1a1e0000)]
+  0x15438400 JavaThread "Thread-129" [_thread_blocked, id=104188, stack(0x1a100000,0x1a150000)]
+  0x15439800 JavaThread "Thread-128" [_thread_blocked, id=104184, stack(0x1a070000,0x1a0c0000)]
+  0x1543b800 JavaThread "Thread-127" [_thread_blocked, id=104176, stack(0x19fe0000,0x1a030000)]
+  0x15437000 JavaThread "Thread-126" [_thread_blocked, id=104164, stack(0x19f50000,0x19fa0000)]
+  0x15436800 JavaThread "Thread-125" [_thread_blocked, id=104152, stack(0x19ec0000,0x19f10000)]
+  0x15438800 JavaThread "Thread-124" [_thread_blocked, id=104140, stack(0x19e30000,0x19e80000)]
+  0x1543ac00 JavaThread "Thread-123" [_thread_blocked, id=104136, stack(0x19da0000,0x19df0000)]
+  0x15435c00 JavaThread "Thread-122" [_thread_blocked, id=104124, stack(0x19d10000,0x19d60000)]
+  0x15437c00 JavaThread "Thread-121" [_thread_blocked, id=104112, stack(0x19c80000,0x19cd0000)]
+  0x15439000 JavaThread "Thread-120" [_thread_blocked, id=104100, stack(0x19bf0000,0x19c40000)]
+  0x15437400 JavaThread "Thread-119" [_thread_blocked, id=104092, stack(0x19b60000,0x19bb0000)]
+  0x15439c00 JavaThread "Thread-118" [_thread_blocked, id=104036, stack(0x19ad0000,0x19b20000)]
+  0x1543bc00 JavaThread "Thread-117" [_thread_blocked, id=104028, stack(0x19a40000,0x19a90000)]
+  0x1543b000 JavaThread "Thread-116" [_thread_blocked, id=103812, stack(0x19780000,0x197d0000)]
+  0x15436400 JavaThread "Thread-115" [_thread_blocked, id=103792, stack(0x196f0000,0x19740000)]
+  0x153d7800 JavaThread "Thread-114" [_thread_blocked, id=103696, stack(0x19660000,0x196b0000)]
+  0x153d5800 JavaThread "Thread-113" [_thread_blocked, id=103560, stack(0x195d0000,0x19620000)]
+  0x153d5000 JavaThread "Thread-112" [_thread_blocked, id=102624, stack(0x19540000,0x19590000)]
+  0x153d3800 JavaThread "Thread-111" [_thread_blocked, id=102124, stack(0x194b0000,0x19500000)]
+  0x153d4c00 JavaThread "Thread-110" [_thread_blocked, id=101480, stack(0x19420000,0x19470000)]
+  0x153d8400 JavaThread "Thread-109" [_thread_blocked, id=101468, stack(0x19390000,0x193e0000)]
+  0x153d8c00 JavaThread "Thread-108" [_thread_blocked, id=101452, stack(0x19300000,0x19350000)]
+  0x153d4400 JavaThread "Thread-107" [_thread_blocked, id=101068, stack(0x19270000,0x192c0000)]
+  0x153d5c00 JavaThread "Thread-106" [_thread_blocked, id=101016, stack(0x191e0000,0x19230000)]
+  0x153d1400 JavaThread "Thread-105" [_thread_blocked, id=101004, stack(0x19150000,0x191a0000)]
+  0x153d3000 JavaThread "Thread-104" [_thread_blocked, id=100796, stack(0x190c0000,0x19110000)]
+  0x153d7000 JavaThread "Thread-103" [_thread_blocked, id=100476, stack(0x19030000,0x19080000)]
+  0x153d2400 JavaThread "Thread-102" [_thread_blocked, id=100468, stack(0x18fa0000,0x18ff0000)]
+  0x153d8000 JavaThread "Thread-101" [_thread_blocked, id=100460, stack(0x18f10000,0x18f60000)]
+  0x153d6400 JavaThread "Thread-100" [_thread_blocked, id=100452, stack(0x18e80000,0x18ed0000)]
+  0x153d1c00 JavaThread "Thread-99" [_thread_blocked, id=100444, stack(0x18df0000,0x18e40000)]
+  0x153d3c00 JavaThread "Thread-98" [_thread_blocked, id=100436, stack(0x18d60000,0x18db0000)]
+  0x153d6c00 JavaThread "Thread-97" [_thread_blocked, id=100428, stack(0x18cd0000,0x18d20000)]
+  0x153d2800 JavaThread "Thread-96" [_thread_blocked, id=100416, stack(0x18c40000,0x18c90000)]
+  0x153b3c00 JavaThread "Thread-95" [_thread_blocked, id=100408, stack(0x18bb0000,0x18c00000)]
+  0x153b3400 JavaThread "Thread-94" [_thread_blocked, id=100396, stack(0x18b20000,0x18b70000)]
+  0x153b6000 JavaThread "Thread-93" [_thread_blocked, id=100392, stack(0x18a90000,0x18ae0000)]
+  0x153b2c00 JavaThread "Thread-92" [_thread_blocked, id=100380, stack(0x18a00000,0x18a50000)]
+  0x153b7000 JavaThread "Thread-91" [_thread_blocked, id=100364, stack(0x18970000,0x189c0000)]
+  0x153b5c00 JavaThread "Thread-90" [_thread_blocked, id=100360, stack(0x188e0000,0x18930000)]
+  0x153b2000 JavaThread "Thread-89" [_thread_blocked, id=100348, stack(0x18850000,0x188a0000)]
+  0x153b9000 JavaThread "Thread-88" [_thread_blocked, id=100332, stack(0x187c0000,0x18810000)]
+  0x153b5400 JavaThread "Thread-87" [_thread_blocked, id=100320, stack(0x18730000,0x18780000)]
+  0x153b4c00 JavaThread "Thread-86" [_thread_blocked, id=99760, stack(0x186a0000,0x186f0000)]
+  0x153b2800 JavaThread "Thread-85" [_thread_blocked, id=99588, stack(0x18610000,0x18660000)]
+  0x153b6800 JavaThread "Thread-84" [_thread_blocked, id=99580, stack(0x18580000,0x185d0000)]
+  0x153b4800 JavaThread "Thread-83" [_thread_blocked, id=99544, stack(0x184f0000,0x18540000)]
+  0x153b1800 JavaThread "Thread-82" [_thread_blocked, id=99516, stack(0x18460000,0x184b0000)]
+  0x153b8800 JavaThread "Thread-81" [_thread_blocked, id=99472, stack(0x183d0000,0x18420000)]
+  0x153b4000 JavaThread "Thread-80" [_thread_blocked, id=99440, stack(0x18340000,0x18390000)]
+  0x153b7c00 JavaThread "Thread-79" [_thread_blocked, id=99416, stack(0x182b0000,0x18300000)]
+  0x153b7400 JavaThread "Thread-78" [_thread_blocked, id=98400, stack(0x18220000,0x18270000)]
+  0x153b8400 JavaThread "Thread-77" [_thread_blocked, id=98264, stack(0x18190000,0x181e0000)]
+  0x15385c00 JavaThread "Thread-76" [_thread_blocked, id=98124, stack(0x18100000,0x18150000)]
+  0x15388c00 JavaThread "Thread-75" [_thread_blocked, id=98108, stack(0x18070000,0x180c0000)]
+  0x15388400 JavaThread "Thread-74" [_thread_in_native, id=97904, stack(0x17fe0000,0x18030000)]
+  0x15387c00 JavaThread "Thread-73" [_thread_blocked, id=97892, stack(0x17f50000,0x17fa0000)]
+  0x1538a000 JavaThread "Thread-72" [_thread_blocked, id=97880, stack(0x17ec0000,0x17f10000)]
+  0x15386c00 JavaThread "Thread-71" [_thread_blocked, id=97872, stack(0x17e30000,0x17e80000)]
+  0x15386400 JavaThread "Thread-70" [_thread_blocked, id=97716, stack(0x17da0000,0x17df0000)]
+  0x15389800 JavaThread "Thread-69" [_thread_blocked, id=97708, stack(0x17d10000,0x17d60000)]
+  0x15385800 JavaThread "Thread-68" [_thread_blocked, id=97568, stack(0x17b80000,0x17bd0000)]
+  0x15384400 JavaThread "Thread-67" [_thread_blocked, id=97344, stack(0x17af0000,0x17b40000)]
+  0x15383c00 JavaThread "Thread-66" [_thread_blocked, id=96540, stack(0x17a60000,0x17ab0000)]
+  0x15382800 JavaThread "Thread-65" [_thread_blocked, id=96536, stack(0x179d0000,0x17a20000)]
+  0x15383800 JavaThread "Thread-64" [_thread_blocked, id=96036, stack(0x17940000,0x17990000)]
+  0x15387800 JavaThread "Thread-63" [_thread_blocked, id=95824, stack(0x178b0000,0x17900000)]
+  0x15385000 JavaThread "Thread-62" [_thread_blocked, id=95820, stack(0x17820000,0x17870000)]
+  0x15383000 JavaThread "Thread-61" [_thread_blocked, id=95816, stack(0x17790000,0x177e0000)]
+  0x15389000 JavaThread "Thread-60" [_thread_blocked, id=95812, stack(0x17700000,0x17750000)]
+  0x15384800 JavaThread "Thread-59" [_thread_blocked, id=95804, stack(0x17670000,0x176c0000)]
+  0x15387000 JavaThread "Thread-58" [_thread_blocked, id=95796, stack(0x175e0000,0x17630000)]
+  0x1536c800 JavaThread "Thread-57" [_thread_blocked, id=95788, stack(0x17550000,0x175a0000)]
+  0x1536a400 JavaThread "Thread-56" [_thread_blocked, id=95784, stack(0x174c0000,0x17510000)]
+  0x15365000 JavaThread "Thread-55" [_thread_blocked, id=95776, stack(0x17430000,0x17480000)]
+  0x1536b400 JavaThread "Thread-54" [_thread_blocked, id=95772, stack(0x173a0000,0x173f0000)]
+  0x1536ac00 JavaThread "Thread-53" [_thread_blocked, id=95768, stack(0x17310000,0x17360000)]
+  0x15368000 JavaThread "Thread-52" [_thread_blocked, id=95764, stack(0x17280000,0x172d0000)]
+  0x15367800 JavaThread "Thread-51" [_thread_blocked, id=95756, stack(0x171f0000,0x17240000)]
+  0x15369000 JavaThread "Thread-50" [_thread_blocked, id=95752, stack(0x17160000,0x171b0000)]
+  0x15365800 JavaThread "Thread-49" [_thread_blocked, id=95744, stack(0x170d0000,0x17120000)]
+  0x15368c00 JavaThread "Thread-48" [_thread_blocked, id=95740, stack(0x17040000,0x17090000)]
+  0x15367000 JavaThread "Thread-47" [_thread_blocked, id=95736, stack(0x16fb0000,0x17000000)]
+  0x15366c00 JavaThread "Thread-46" [_thread_blocked, id=95732, stack(0x16f20000,0x16f70000)]
+  0x1536a000 JavaThread "Thread-45" [_thread_blocked, id=95728, stack(0x16e90000,0x16ee0000)]
+  0x15365c00 JavaThread "Thread-44" [_thread_blocked, id=95724, stack(0x16e00000,0x16e50000)]
+  0x1536c000 JavaThread "Thread-43" [_thread_blocked, id=95720, stack(0x16d70000,0x16dc0000)]
+  0x15366400 JavaThread "Thread-42" [_thread_blocked, id=95712, stack(0x16ce0000,0x16d30000)]
+  0x1536b800 JavaThread "Thread-41" [_thread_blocked, id=95708, stack(0x16c50000,0x16ca0000)]
+  0x15369800 JavaThread "Thread-40" [_thread_blocked, id=95704, stack(0x16bc0000,0x16c10000)]
+  0x15368400 JavaThread "Thread-39" [_thread_blocked, id=95696, stack(0x16b30000,0x16b80000)]
+  0x1534d400 JavaThread "Thread-38" [_thread_blocked, id=95684, stack(0x16aa0000,0x16af0000)]
+  0x1534c000 JavaThread "Thread-37" [_thread_blocked, id=95676, stack(0x16a10000,0x16a60000)]
+  0x1534a000 JavaThread "Thread-36" [_thread_blocked, id=95672, stack(0x16980000,0x169d0000)]
+  0x15349800 JavaThread "Thread-35" [_thread_blocked, id=95384, stack(0x168f0000,0x16940000)]
+  0x1534c800 JavaThread "Thread-34" [_thread_blocked, id=95272, stack(0x16860000,0x168b0000)]
+  0x15348400 JavaThread "Thread-33" [_thread_blocked, id=95264, stack(0x167d0000,0x16820000)]
+  0x15348000 JavaThread "Thread-32" [_thread_blocked, id=95260, stack(0x16740000,0x16790000)]
+  0x1534b800 JavaThread "Thread-31" [_thread_blocked, id=95152, stack(0x166b0000,0x16700000)]
+  0x1534cc00 JavaThread "Thread-30" [_thread_blocked, id=95140, stack(0x16620000,0x16670000)]
+  0x15348c00 JavaThread "Thread-29" [_thread_blocked, id=95132, stack(0x16590000,0x165e0000)]
+  0x1534a800 JavaThread "Thread-28" [_thread_blocked, id=95120, stack(0x16500000,0x16550000)]
+  0x15349400 JavaThread "Thread-27" [_thread_blocked, id=95116, stack(0x16470000,0x164c0000)]
+  0x1534b400 JavaThread "Thread-26" [_thread_blocked, id=95096, stack(0x163e0000,0x16430000)]
+  0x15347800 JavaThread "Thread-25" [_thread_blocked, id=95084, stack(0x16350000,0x163a0000)]
+  0x15346000 JavaThread "Thread-24" [_thread_blocked, id=95068, stack(0x162c0000,0x16310000)]
+  0x15347000 JavaThread "Thread-23" [_thread_blocked, id=95056, stack(0x16230000,0x16280000)]
+  0x1534ac00 JavaThread "Thread-22" [_thread_blocked, id=95044, stack(0x161a0000,0x161f0000)]
+  0x15346c00 JavaThread "Thread-21" [_thread_blocked, id=95032, stack(0x16110000,0x16160000)]
+  0x15346400 JavaThread "Thread-20" [_thread_blocked, id=95020, stack(0x16080000,0x160d0000)]
+  0x1532a400 JavaThread "Thread-19" [_thread_blocked, id=94532, stack(0x15ff0000,0x16040000)]
+  0x15329c00 JavaThread "Thread-18" [_thread_blocked, id=94520, stack(0x15f60000,0x15fb0000)]
+  0x15329800 JavaThread "Thread-17" [_thread_blocked, id=94508, stack(0x15ed0000,0x15f20000)]
+  0x15328400 JavaThread "Thread-16" [_thread_blocked, id=94500, stack(0x15e40000,0x15e90000)]
+  0x15327c00 JavaThread "Thread-15" [_thread_blocked, id=94496, stack(0x15db0000,0x15e00000)]
+  0x15327400 JavaThread "Thread-14" [_thread_blocked, id=94492, stack(0x15d20000,0x15d70000)]
+  0x15329000 JavaThread "Thread-13" [_thread_blocked, id=94056, stack(0x15c90000,0x15ce0000)]
+  0x15328800 JavaThread "Thread-12" [_thread_blocked, id=91508, stack(0x15bc0000,0x15c10000)]
+  0x1532ac00 JavaThread "Thread-11" [_thread_blocked, id=91504, stack(0x15b30000,0x15b80000)]
+  0x15323800 JavaThread "Thread-10" [_thread_blocked, id=90184, stack(0x15aa0000,0x15af0000)]
+  0x15323000 JavaThread "Thread-9" [_thread_blocked, id=90172, stack(0x15a10000,0x15a60000)]
+  0x1531c800 JavaThread "Thread-8" [_thread_blocked, id=89984, stack(0x15980000,0x159d0000)]
+  0x1531b000 JavaThread "Thread-7" [_thread_blocked, id=89980, stack(0x158f0000,0x15940000)]
+  0x15316000 JavaThread "Thread-6" [_thread_blocked, id=89976, stack(0x15860000,0x158b0000)]
+  0x15313800 JavaThread "Thread-5" [_thread_blocked, id=89956, stack(0x157d0000,0x15820000)]
+  0x15312800 JavaThread "Thread-4" [_thread_blocked, id=89948, stack(0x15740000,0x15790000)]
+  0x1530fc00 JavaThread "Thread-3" [_thread_blocked, id=89944, stack(0x156b0000,0x15700000)]
+  0x1530f000 JavaThread "Thread-2" [_thread_blocked, id=89936, stack(0x15620000,0x15670000)]
+  0x1530e800 JavaThread "Thread-1" [_thread_blocked, id=89928, stack(0x15590000,0x155e0000)]
+  0x1530d800 JavaThread "Thread-0" [_thread_blocked, id=89924, stack(0x15500000,0x15550000)]
+  0x14edb400 JavaThread "Service Thread" daemon [_thread_blocked, id=28520, stack(0x151e0000,0x15230000)]
+  0x14eae400 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=28512, stack(0x15150000,0x151a0000)]
+  0x14eadc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=28508, stack(0x150c0000,0x15110000)]
+  0x14eb7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=28504, stack(0x14df0000,0x14e40000)]
+  0x00b7a000 JavaThread "Finalizer" daemon [_thread_blocked, id=26248, stack(0x14d30000,0x14d80000)]
+  0x00b73400 JavaThread "Reference Handler" daemon [_thread_blocked, id=25124, stack(0x14ca0000,0x14cf0000)]
+=>0x00ab3400 JavaThread "main" [_thread_in_vm, id=24204, stack(0x00dd0000,0x00e20000)]
+
+Other Threads:
+  0x00b5fc00 VMThread [stack: 0x047a0000,0x047f0000] [id=25308]
+  0x14ee7800 WatcherThread [stack: 0x15270000,0x152c0000] [id=28676]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00aadf08] Threads_lock - owner thread: 0x00ab3400
+
+Heap:
+ def new generation   total 4928K, used 2788K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K,  55% used [0x04800000, 0x04a60c10, 0x04c50000)
+  from space 512K,  69% used [0x04c50000, 0x04ca87c8, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 10226K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  93% used [0x09d50000, 0x0a74c9a8, 0x0a74ca00, 0x0a800000)
+ Metaspace       used 2356K, capacity 2503K, committed 2624K, reserved 4480K
+
+Card table byte_map: [0x04670000,0x04700000] byte_map_base: 0x0464c000
+
+Polling page: 0x00c60000
+
+CodeCache: size=32768Kb used=795Kb max_used=795Kb free=31972Kb
+ bounds [0x025f0000, 0x026b8000, 0x045f0000]
+ total_blobs=284 nmethods=143 adapters=72
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 4.242 Thread 0x14eae400  139             java.lang.String::<init> (10 bytes)
+Event: 4.242 Thread 0x14eae400 nmethod 139 0x026b5e08 code [0x026b5f00, 0x026b5f90]
+Event: 4.908 Thread 0x14eae400  140             java.lang.String::isEmpty (14 bytes)
+Event: 4.920 Thread 0x14eae400 nmethod 140 0x026b5fc8 code [0x026b60c0, 0x026b6160]
+Event: 5.297 Thread 0x14eae400  141             java.util.Arrays::copyOf (19 bytes)
+Event: 5.321 Thread 0x14eae400 nmethod 141 0x026b61c8 code [0x026b62d0, 0x026b643c]
+Event: 5.455 Thread 0x14eae400  142             java.lang.String::getChars (16 bytes)
+Event: 5.455 Thread 0x14eae400 nmethod 142 0x026b6508 code [0x026b6610, 0x026b66fc]
+Event: 5.455 Thread 0x14eae400  143             java.lang.String::concat (50 bytes)
+Event: 5.455 Thread 0x14eae400 nmethod 143 0x026b6788 code [0x026b68b0, 0x026b6b38]
+
+GC Heap History (8 events):
+Event: 2.845 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4928K, used 4416K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K, 100% used [0x04800000, 0x04c50000, 0x04c50000)
+  from space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 0K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,   0% used [0x09d50000, 0x09d50000, 0x09d50200, 0x0a800000)
+ Metaspace       used 2287K, capacity 2431K, committed 2496K, reserved 4480K
+Event: 2.877 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4928K, used 512K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K,   0% used [0x04800000, 0x04800000, 0x04c50000)
+  from space 512K, 100% used [0x04cd0000, 0x04d50000, 0x04d50000)
+  to   space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+ tenured generation   total 10944K, used 2259K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  20% used [0x09d50000, 0x09f84f08, 0x09f85000, 0x0a800000)
+ Metaspace       used 2287K, capacity 2431K, committed 2496K, reserved 4480K
+}
+Event: 2.927 GC heap before
+{Heap before GC invocations=1 (full 0):
+ def new generation   total 4928K, used 4928K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K, 100% used [0x04800000, 0x04c50000, 0x04c50000)
+  from space 512K, 100% used [0x04cd0000, 0x04d50000, 0x04d50000)
+  to   space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+ tenured generation   total 10944K, used 2259K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  20% used [0x09d50000, 0x09f84f08, 0x09f85000, 0x0a800000)
+ Metaspace       used 2287K, capacity 2431K, committed 2496K, reserved 4480K
+Event: 3.170 GC heap after
+Heap after GC invocations=2 (full 0):
+ def new generation   total 4928K, used 512K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K,   0% used [0x04800000, 0x04800000, 0x04c50000)
+  from space 512K, 100% used [0x04c50000, 0x04cd0000, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 6197K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  56% used [0x09d50000, 0x0a35d418, 0x0a35d600, 0x0a800000)
+ Metaspace       used 2287K, capacity 2431K, committed 2496K, reserved 4480K
+}
+Event: 3.382 GC heap before
+{Heap before GC invocations=2 (full 0):
+ def new generation   total 4928K, used 4928K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K, 100% used [0x04800000, 0x04c50000, 0x04c50000)
+  from space 512K, 100% used [0x04c50000, 0x04cd0000, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 6197K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  56% used [0x09d50000, 0x0a35d418, 0x0a35d600, 0x0a800000)
+ Metaspace       used 2321K, capacity 2471K, committed 2496K, reserved 4480K
+Event: 3.535 GC heap after
+Heap after GC invocations=3 (full 0):
+ def new generation   total 4928K, used 512K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K,   0% used [0x04800000, 0x04800000, 0x04c50000)
+  from space 512K, 100% used [0x04cd0000, 0x04d50000, 0x04d50000)
+  to   space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+ tenured generation   total 10944K, used 9714K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  88% used [0x09d50000, 0x0a6cca18, 0x0a6ccc00, 0x0a800000)
+ Metaspace       used 2321K, capacity 2471K, committed 2496K, reserved 4480K
+}
+Event: 4.843 GC heap before
+{Heap before GC invocations=3 (full 0):
+ def new generation   total 4928K, used 4928K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K, 100% used [0x04800000, 0x04c50000, 0x04c50000)
+  from space 512K, 100% used [0x04cd0000, 0x04d50000, 0x04d50000)
+  to   space 512K,   0% used [0x04c50000, 0x04c50000, 0x04cd0000)
+ tenured generation   total 10944K, used 9714K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  88% used [0x09d50000, 0x0a6cca18, 0x0a6ccc00, 0x0a800000)
+ Metaspace       used 2356K, capacity 2503K, committed 2624K, reserved 4480K
+Event: 4.860 GC heap after
+Heap after GC invocations=4 (full 0):
+ def new generation   total 4928K, used 353K [0x04800000, 0x04d50000, 0x09d50000)
+  eden space 4416K,   0% used [0x04800000, 0x04800000, 0x04c50000)
+  from space 512K,  69% used [0x04c50000, 0x04ca87c8, 0x04cd0000)
+  to   space 512K,   0% used [0x04cd0000, 0x04cd0000, 0x04d50000)
+ tenured generation   total 10944K, used 10226K [0x09d50000, 0x0a800000, 0x14800000)
+   the space 10944K,  93% used [0x09d50000, 0x0a74c9a8, 0x0a74ca00, 0x0a800000)
+ Metaspace       used 2356K, capacity 2503K, committed 2624K, reserved 4480K
+}
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (6 events):
+Event: 0.105 Thread 0x00ab3400 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x04806eb8) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\
+Event: 0.105 Thread 0x00ab3400 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x04807188) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\jni
+Event: 0.347 Thread 0x00ab3400 Exception <a 'java/security/PrivilegedActionException'> (0x0485e1b8) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 0.347 Thread 0x00ab3400 Exception <a 'java/security/PrivilegedActionException'> (0x0485e3b8) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 1.371 Thread 0x00ab3400 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x0495f808) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\methodHandles.cpp, line 1169]
+Event: 1.386 Thread 0x00ab3400 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x0496b9c8) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\methodHandles.cpp, line 1169]
+
+Events (10 events):
+Event: 7.070 Thread 0x1b9d4c00 Thread added: 0x1b9d4c00
+Event: 7.070 Thread 0x1b9d7c00 Thread added: 0x1b9d7c00
+Event: 7.074 Thread 0x1b9d8400 Thread added: 0x1b9d8400
+Event: 7.118 Thread 0x1b9d9400 Thread added: 0x1b9d9400
+Event: 7.122 Thread 0x1b9d2800 Thread added: 0x1b9d2800
+Event: 7.165 Thread 0x1b9d9c00 Thread added: 0x1b9d9c00
+Event: 7.180 Thread 0x1b9d4800 Thread added: 0x1b9d4800
+Event: 7.180 Thread 0x1b9d2c00 Thread added: 0x1b9d2c00
+Event: 7.180 Thread 0x1b9d5400 Thread added: 0x1b9d5400
+Event: 7.200 Thread 0x1b9dc400 Thread added: 0x1b9dc400
+
+
+Dynamic libraries:
+0x00c70000 - 0x00cae000 	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+0x77b60000 - 0x77d09000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x76240000 - 0x76330000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x75f80000 - 0x761d2000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x741f0000 - 0x74290000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x77a50000 - 0x77acb000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x76a20000 - 0x76ae2000 	C:\WINDOWS\System32\msvcrt.dll
+0x76af0000 - 0x76b6a000 	C:\WINDOWS\System32\sechost.dll
+0x76890000 - 0x7694c000 	C:\WINDOWS\System32\RPCRT4.dll
+0x75900000 - 0x75aac000 	C:\WINDOWS\System32\USER32.dll
+0x76d40000 - 0x76d5a000 	C:\WINDOWS\System32\win32u.dll
+0x76fb0000 - 0x76fd2000 	C:\WINDOWS\System32\GDI32.dll
+0x777f0000 - 0x778cf000 	C:\WINDOWS\System32\gdi32full.dll
+0x77ad0000 - 0x77b4b000 	C:\WINDOWS\System32\msvcp_win.dll
+0x76d60000 - 0x76e72000 	C:\WINDOWS\System32\ucrtbase.dll
+0x74ad0000 - 0x74cf3000 	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_e541a94fcce8ed6d\COMCTL32.dll
+0x76e80000 - 0x76ea5000 	C:\WINDOWS\System32\IMM32.DLL
+0x75120000 - 0x75133000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\vcruntime140.dll
+0x750b0000 - 0x7511f000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\msvcp140.dll
+0x74450000 - 0x7482f000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\client\jvm.dll
+0x778f0000 - 0x778f6000 	C:\WINDOWS\System32\PSAPI.DLL
+0x75060000 - 0x75068000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x76cd0000 - 0x76d34000 	C:\WINDOWS\System32\WS2_32.dll
+0x75070000 - 0x750a1000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x74eb0000 - 0x74eb8000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x75230000 - 0x75242000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x75050000 - 0x7505d000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\verify.dll
+0x75020000 - 0x75044000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\java.dll
+0x75000000 - 0x75014000 	C:\Program Files (x86)\Java\jre1.8.0_311\bin\zip.dll
+0x771e0000 - 0x777e1000 	C:\WINDOWS\System32\SHELL32.dll
+0x75250000 - 0x758f1000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x76560000 - 0x767eb000 	C:\WINDOWS\System32\combase.dll
+0x75140000 - 0x7522a000 	C:\WINDOWS\SYSTEM32\wintypes.dll
+0x76950000 - 0x76a11000 	C:\WINDOWS\System32\SHCORE.dll
+0x77040000 - 0x7708a000 	C:\WINDOWS\System32\shlwapi.dll
+0x74d00000 - 0x74d18000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x73ee0000 - 0x740a7000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x77900000 - 0x77964000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Djava.library.path=PATH\x64_win64 
+java_command: main.Main -b 30 C:\Users\Jaime\OneDrive - correounivalle.edu.co\Documentos\Github\TranslationTraceUppaal\Train-Gate-Controller\mutantsUniform\ccn4.xml C:\Users\Jaime\OneDrive - correounivalle.edu.co\Documentos\Github\TranslationTraceUppaal\Train-Gate-Controller\mutantsUniform\tadSyncid6id6.xml
+java_class_path (initial): tool.jar;threadsBash.jar;PATH\cplex.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Program Files\IBM\ILOG\CPLEX_Studio201\opl\bin\x64_win64;C:\Program Files\IBM\ILOG\CPLEX_Studio201\opl\oplide\;C:\Program Files\IBM\ILOG\CPLEX_Studio201\cplex\bin\x64_win64;C:\Program Files\IBM\ILOG\CPLEX_Studio201\cpoptimizer\bin\x64_win64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\uppaal64-4.1.25-5\bin-Windows;C:\Program Files\swigwin-1.3.40;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build;C:\Users\Jaime\AppData\Local\Microsoft\WindowsApps;C:\Program Files\mCRL2\bin;C:\Users\Jaime\.dotnet\tools;
+USERNAME=Jaime
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22000 (10.0.22000.318)
+
+CPU:total 16 (initial active 16) (16 cores per cpu, 1 threads per core) family 23 model 104 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 7761832k(1528k free), swap 23346884k(2439724k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.311-b11) for windows-x86 JRE (1.8.0_311-b11), built on Sep 27 2021 05:20:10 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Wed Dec 22 00:14:27 2021
+timezone: Hora estándar romance
+elapsed time: 18.663775 seconds (0d 0h 0m 18s)
+

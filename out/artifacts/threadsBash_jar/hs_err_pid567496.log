@@ -1,0 +1,91 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x745b5a5d, pid=567496, tid=0x0004f6b8
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_311-b11) (build 1.8.0_311-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x165a5d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x15772800):  JavaThread "Thread-15" [_thread_in_vm, id=325304, stack(0x161f0000,0x16240000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x00000001 0x1623d230 
+
+Registers:
+EAX=0x00002000, EBX=0x15772800, ECX=0x1623d230, EDX=0x00000006
+ESP=0x1623f23c, EBP=0x1623f2d8, ESI=0x00000003, EDI=0x1623f230
+EIP=0x745b5a5d, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x1623f23c)
+0x1623f23c:   15772800 1623f3a4 1575e738 14c24a88
+0x1623f24c:   14c24a88 14c23110 15772800 14c23110
+0x1623f25c:   15772800 15772800 1623f250 157624f0
+0x1623f26c:   00000005 15772800 1623f2d8 744d9d4f
+0x1623f27c:   14c24a88 14c24a88 14c23110 15772800
+0x1623f28c:   14c23110 15772800 00000005 744d9d5f
+0x1623f29c:   1623f434 1623f2e4 1575e738 1623f2f0
+0x1623f2ac:   76d93432 1623f2e0 00000001 ffffffff 
+
+Instructions: (pc=0x745b5a5d)
+0x745b5a3d:   45 e8 39 35 a4 9e 7b 74 7c 27 8b f8 8d a4 24 00
+0x745b5a4d:   00 00 00 e8 7b ce 06 00 0f af c6 8b cf 46 2b c8
+0x745b5a5d:   c7 01 00 00 00 00 3b 35 a4 9e 7b 74 7e e5 8b 7d
+0x745b5a6d:   10 8b 45 08 53 50 ff 75 f0 8d 45 f4 83 ec 08 8b 
+
+
+Register to memory mapping:
+
+EAX=0x00002000 is an unknown value
+EBX=0x15772800 is a thread
+ECX=0x1623d230 is pointing into the stack for thread: 0x15772800
+EDX=0x00000006 is an unknown value
+ESP=0x1623f23c is pointing into the stack for thread: 0x15772800
+EBP=0x1623f2d8 is pointing into the stack for thread: 0x15772800
+ESI=0x00000003 is an unknown value
+EDI=0x1623f230 is pointing into the stack for thread: 0x15772800
+
+
+Stack: [0x161f0000,0x16240000],  sp=0x1623f23c,  free space=316k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x165a5d]
+V  [jvm.dll+0x2369bb]
+V  [jvm.dll+0x1662e7]
+V  [jvm.dll+0x166226]
+V  [jvm.dll+0x1014fb]
+V  [jvm.dll+0x18a364]
+V  [jvm.dll+0x1cf7fb]
+C  [ucrtbase.dll+0x46823]
+C  [KERNEL32.DLL+0x16739]
+C  [ntdll.dll+0x68aff]
+C  [ntdll.dll+0x68acd]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x157bc400 JavaThread "Thread-39" [_thread_new, id=325616, stack(0x00000000,0x00000000)]
+  0x157bc000 JavaThread "Thread-38" [_thread_new, id=325612, stack(0x00000000,0x00000000)]
+  0x157bb000 JavaThread "Thread-37" [_thread_new, id=325608, stack(0x00000000,0x00000000)]
+  0x157bb800 JavaThread "Thread-36" [_thread_new, id=325604, stack(0x00000000,0x00000000)]
+  0x157b9c00 JavaThread "Thread-35" [_thread_new, id=325600, stack(0x00000000,0x00000000)]
+  0x157bcc00 JavaThread "Thread-34" [_thread_new, id=325592, stack(0x00000000,0x00000000)]
+  0x1576f800 JavaThread "Thread-33" [_thread_new, id=325584, stack(0x00000000,0x00000000)]
+  0x15776000 JavaThread "Thread-32" [_thread_new, id=325580, stack(0x00000000,0x00000000)]
+  0x1576ec00 JavaThread "Thread-31" [_thread_new, id=325576, stack(0x00000000,0x00000000)]
+  0x15775c00 JavaThread "Thread-30" [_thread_new, id=325568, stack(0x00000000,0x00000000)]
+  0x15774000 JavaThread "Thread-29" [_thread_new, id=325552, stack(0x00000000,0x00000000)]
+  0x15773c00 JavaThread "Thread-28" [_thread_new, id=325544, stack(0x00000000,0x00000000)]
+  0x15773400 JavaThread "Thread-27" [_thread_new, id=325536, stack(0x00000000,0x00000000)]
+  0x15775400 JavaThread "Thread-26" [_thread_new, id=325528, stack(0x00000000,0x00000000)]
+  0x15772c00 JavaThread "Thread-25" [_thread_new, id=325524, stack(0x00000000,0x00000000)]
+  0x15775000 JavaThread "Thread-24" [

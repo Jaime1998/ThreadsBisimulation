@@ -1,0 +1,67 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x745b5a5d, pid=57644, tid=0x0008cf3c
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_311-b11) (build 1.8.0_311-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x165a5d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x1fca5800):  JavaThread "Thread-335" [_thread_in_vm, id=577340, stack(0x22470000,0x224c0000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x00000001 0x224bead0 
+
+Registers:
+EAX=0x00001000, EBX=0x1fca5800, ECX=0x224bead0, EDX=0x00000006
+ESP=0x224bfadc, EBP=0x224bfb78, ESI=0x00000002, EDI=0x224bfad0
+EIP=0x745b5a5d, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x224bfadc)
+0x224bfadc:   1fca5800 224bfc44 1fc9dfb0 15224a88
+0x224bfaec:   15224a88 15223110 1fca5800 15223110
+0x224bfafc:   1fca5800 1fca5800 224bfaf0 1fc554c0
+0x224bfb0c:   00000005 1fca5800 224bfb78 744d9d4f
+0x224bfb1c:   15224a88 15224a88 15223110 1fca5800
+0x224bfb2c:   15223110 1fca5800 00000005 744d9d5f
+0x224bfb3c:   224bfcd4 224bfb84 1fc9dfb0 224bfb90
+0x224bfb4c:   76d93432 224bfb80 00000001 ffffffff 
+
+Instructions: (pc=0x745b5a5d)
+0x745b5a3d:   45 e8 39 35 a4 9e 7b 74 7c 27 8b f8 8d a4 24 00
+0x745b5a4d:   00 00 00 e8 7b ce 06 00 0f af c6 8b cf 46 2b c8
+0x745b5a5d:   c7 01 00 00 00 00 3b 35 a4 9e 7b 74 7e e5 8b 7d
+0x745b5a6d:   10 8b 45 08 53 50 ff 75 f0 8d 45 f4 83 ec 08 8b 
+
+
+Register to memory mapping:
+
+EAX=0x00001000 is an unknown value
+EBX=0x1fca5800 is a thread
+ECX=0x224bead0 is pointing into the stack for thread: 0x1fca5800
+EDX=0x00000006 is an unknown value
+ESP=0x224bfadc is pointing into the stack for thread: 0x1fca5800
+EBP=0x224bfb78 is pointing into the stack for thread: 0x1fca5800
+ESI=0x00000002 is an unknown value
+EDI=0x224bfad0 is pointing into the stack for thread: 0x1fca5800
+
+
+Stack: [0x22470000,0x224c0000],  sp=0x224bfadc,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x165a5d]
+V  [jvm.dll+0x2369bb]
+V  [jvm.dll+0x1662e7]
+V  [jvm.dll+0x166226]
+V  [jvm.dll+0x1014fb]
+V  [jvm.dll+0x18a364]
+V  [jvm.dll+0x1cf7fb]
+C  [ucrtbase.dll+0x46823]
+C  [KERNEL32.DLL+0x16739]

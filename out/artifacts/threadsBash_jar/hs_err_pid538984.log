@@ -1,0 +1,134 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x745b5a5d, pid=538984, tid=0x0000ba94
+#
+# JRE version:  (8.0_311-b11) (build )
+# Java VM: Java HotSpot(TM) Client VM (25.311-b11 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x165a5d]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x01522800):  JavaThread "Reference Handler" daemon [_thread_in_vm, id=47764, stack(0x15730000,0x15780000)]
+
+siginfo: ExceptionCode=0xc00000fd, ExceptionInformation=0x00000001 0x1577e920 
+
+Registers:
+EAX=0x00001000, EBX=0x01522800, ECX=0x1577e920, EDX=0x00000006
+ESP=0x1577f92c, EBP=0x1577f9c8, ESI=0x00000002, EDI=0x1577f920
+EIP=0x745b5a5d, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x1577f92c)
+0x1577f92c:   01522800 1577fa94 01522c20 15224a88
+0x1577f93c:   152977a8 15223110 01522800 152976e8
+0x1577f94c:   01522800 01522800 1577f940 01523028
+0x1577f95c:   00000005 01522800 1577f9c8 744d9d4f
+0x1577f96c:   15224a88 152977a8 15223110 01522800
+0x1577f97c:   152976e8 01522800 00000005 744d9d5f
+0x1577f98c:   1577fb24 1577f9d4 01522c20 1577f9e0
+0x1577f99c:   76d93432 1577f9d0 00000001 ffffffff 
+
+Instructions: (pc=0x745b5a5d)
+0x745b5a3d:   45 e8 39 35 a4 9e 7b 74 7c 27 8b f8 8d a4 24 00
+0x745b5a4d:   00 00 00 e8 7b ce 06 00 0f af c6 8b cf 46 2b c8
+0x745b5a5d:   c7 01 00 00 00 00 3b 35 a4 9e 7b 74 7e e5 8b 7d
+0x745b5a6d:   10 8b 45 08 53 50 ff 75 f0 8d 45 f4 83 ec 08 8b 
+
+
+Register to memory mapping:
+
+EAX=0x00001000 is an unknown value
+EBX=0x01522800 is a thread
+ECX=0x1577e920 is pointing into the stack for thread: 0x01522800
+EDX=0x00000006 is an unknown value
+ESP=0x1577f92c is pointing into the stack for thread: 0x01522800
+EBP=0x1577f9c8 is pointing into the stack for thread: 0x01522800
+ESI=0x00000002 is an unknown value
+EDI=0x1577f920 is pointing into the stack for thread: 0x01522800
+
+
+Stack: [0x15730000,0x15780000],  sp=0x1577f92c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x165a5d]
+V  [jvm.dll+0x2369bb]
+V  [jvm.dll+0x1662e7]
+V  [jvm.dll+0x166226]
+V  [jvm.dll+0x1014fb]
+V  [jvm.dll+0x18a364]
+V  [jvm.dll+0x1cf7fb]
+C  [ucrtbase.dll+0x46823]
+C  [KERNEL32.DLL+0x16739]
+C  [ntdll.dll+0x68aff]
+C  [ntdll.dll+0x68acd]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x01535000 JavaThread "Finalizer" daemon [_thread_in_vm, id=529956, stack(0x157c0000,0x15810000)]
+=>0x01522800 JavaThread "Reference Handler" daemon [_thread_in_vm, id=47764, stack(0x15730000,0x15780000)]
+  0x0146e800 JavaThread "main" [_thread_in_native, id=562008, stack(0x01740000,0x01790000)]
+
+Other Threads:
+  0x0151d000 VMThread [stack: 0x156a0000,0x156f0000] [id=350840]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 88K [0x05200000, 0x05750000, 0x0a750000)
+  eden space 4416K,   2% used [0x05200000, 0x05216158, 0x05650000)
+  from space 512K,   0% used [0x05650000, 0x05650000, 0x056d0000)
+  to   space 512K,   0% used [0x056d0000, 0x056d0000, 0x05750000)
+ tenured generation   total 10944K, used 0K [0x0a750000, 0x0b200000, 0x15200000)
+   the space 10944K,   0% used [0x0a750000, 0x0a750000, 0x0a750200, 0x0b200000)
+ Metaspace       used 727K, capacity 2240K, committed 2240K, reserved 4480K
+
+Card table byte_map: [0x05050000,0x050e0000] byte_map_base: 0x05027000
+
+Polling page: 0x01790000
+
+CodeCache: size=32768Kb used=338Kb max_used=338Kb free=32429Kb
+ bounds [0x02fd0000, 0x03028000, 0x04fd0000]
+ total_blobs=68 nmethods=0 adapters=45
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 3.150 Thread 0x0146e800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x05206eb8) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\
+Event: 3.150 Thread 0x0146e800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x05207188) thrown at [C:\jenkins\workspace\8-2-build-windows-i586-cygwin\jdk8u311\1894\hotspot\src\share\vm\prims\jni
+
+Events (10 events):
+Event: 3.152 loading class java/util/HashMap$Node done
+Event: 3.152 loading class sun/misc/VM
+Event: 3.152 loading class sun/misc/VM done
+Event: 3.152 loading class java/util/Hashtable$Entry
+Event: 3.153 loading class java/util/Hashtable$Entry done
+Event: 3.153 loading class java/lang/Math
+Event: 3.153 loading class java/lang/Math done
+Event: 3.153 loading class java/lang/ref/Finalizer$FinalizerThread
+Event: 3.153 loading class java/lang/ref/Finalizer$FinalizerThread done
+Event: 3.153 Thread 0x01535000 Thread added: 0x01535000
+
+
+Dynamic libraries:
