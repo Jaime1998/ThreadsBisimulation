@@ -15,10 +15,10 @@ public class MainThreads {
 
         ThreadPoolExecutor executor = (ThreadPoolExecutor)Executors.newFixedThreadPool(nThreads);
 
-        String saveFile = "TramBisimthreadstesting.csv";
+        String saveFile = "TramBisimUniform.csv";
 
         //File file = new File("C:\\Users\\Jaime\\OneDrive - correounivalle.edu.co\\Documentos\\Github\\TranslationTraceUppaal\\Train-Gate-Controller\\mutantsUniform");
-        File file = new File("C:\\Users\\Jaime\\Desktop\\tramBisim3");
+        File file = new File("C:\\Users\\Jaime\\Desktop\\Uniform");
         final String[] pathnames = file.list();
 
         String pathFolder = file.getAbsolutePath();
