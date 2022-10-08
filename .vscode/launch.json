@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "main.Main",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main2",
+            "request": "launch",
+            "mainClass": "main.Main2",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainNaive",
+            "request": "launch",
+            "mainClass": "main.MainNaive",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainThreads",
+            "request": "launch",
+            "mainClass": "main.MainThreads",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch Similarity",
+            "request": "launch",
+            "mainClass": "main.Similarity",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch traceRandom",
+            "request": "launch",
+            "mainClass": "main.traceRandom",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch traceRandomAvoiding",
+            "request": "launch",
+            "mainClass": "main.traceRandomAvoiding",
+            "projectName": "threadsBash_be401a79"
+        },
+        {
+            "type": "java",
+            "name": "Launch traceRandomNothread",
+            "request": "launch",
+            "mainClass": "main.traceRandomNothread",
+            "projectName": "threadsBash_be401a79"
+        }
+    ]
+}

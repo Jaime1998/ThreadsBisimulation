@@ -2,6 +2,7 @@ package main;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.CountDownLatch;
 
 public class ProcessTask implements Runnable {
@@ -11,6 +12,7 @@ public class ProcessTask implements Runnable {
     private final String automatonA;
     private final String automatonB;
     private final FileWriter fw;
+    private final FileWriter fwLog;
     CountDownLatch latch;
 
     ProcessTask( ArrayList<String> bisimilarList,
@@ -18,25 +20,50 @@ public class ProcessTask implements Runnable {
                  String automatonA,
                  String automatonB,
                  String saveFile,
+                 String saveFileLog,
                  CountDownLatch latch) throws IOException {
         this.bisimilarList = bisimilarList;
         this.pathFolder = pathFolder;
         this.automatonA = automatonA;
         this.automatonB = automatonB;
         this.fw = new FileWriter(saveFile, true);
+        this.fwLog = new FileWriter(saveFile, true);
         this.latch = latch;
     }
 
 
-    public synchronized void writeFile(String[] write) throws IOException {
-
-        for(String w: write){
-            this.fw.write(w);
-            this.fw.write(",");
+    public synchronized void writeFile(String[] write)  {
+        try{
+            for(String w: write){
+                this.fw.write(w);
+                this.fw.write(",");
+            }
+            this.fw.write("\n");
+            this.fw.flush();
+            this.fw.close();
+        } catch (IOException e) {
+            writeFileLog(write);
         }
-        this.fw.write("\n");
-        this.fw.flush();
-        this.fw.close();
+
+    }
+
+    public synchronized void writeFileLog(String[] write)  {
+        try{
+            for(String w: write){
+                this.fwLog.write(w);
+                this.fwLog.write(",");
+            }
+            this.fwLog.write("\n");
+            this.fwLog.flush();
+            this.fwLog.close();
+        }catch (IOException e){
+            System.out.println("No se pudo escribir en log: ");
+            for(String w: write){
+                System.out.print(w);
+            }
+            System.out.println();
+        }
+
     }
 
     public void run () {
@@ -45,7 +72,13 @@ public class ProcessTask implements Runnable {
             //String cmd = "\"C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath\\java.exe\" -Djava.library.path=PATH\\x64_win64 -cp \"tool.jar;*;PATH\\cplex.jar\" main.Main -b 30 \"".concat(pathFolder).concat("\\".concat(pathnames[finalI])).concat("\" \"").concat(pathFolder).concat("\\".concat(pathnames[finalJ])).concat("\"");
 
             //Process p = Runtime.getRuntime().exec(cmd);
-            String[] cmd = {"java",
+
+            String[] logWriter = new String[1];
+            logWriter[0] = this.automatonA.concat(" ").concat(automatonB);
+
+            writeFile(logWriter);
+
+            String[] cmd1 = {"java",
                             "-Djava.library.path=PATH\\x64_win64",
                             "-cp",
                             "\"tool.jar;*;PATH\\cplex.jar\"",
@@ -54,6 +87,12 @@ public class ProcessTask implements Runnable {
                             "30",
                             "\"".concat(this.pathFolder).concat(File.separator).concat(this.automatonA).concat("\""),
                             "\"".concat(this.pathFolder).concat(File.separator).concat(this.automatonB).concat("\""),};
+
+            String[] cmd = {"java",
+                    "-jar",
+                    "ImplThesis.jar",
+                    "\"".concat(this.pathFolder).concat(File.separator).concat(this.automatonA).concat("\""),
+                    "\"".concat(this.pathFolder).concat(File.separator).concat(this.automatonB).concat("\""),};
 
 
             ProcessBuilder pb = new ProcessBuilder(cmd);
@@ -67,7 +106,6 @@ public class ProcessTask implements Runnable {
             long start = System.currentTimeMillis();
 
             while ((line = stdInput.readLine()) != null) {
-
 
                 if(line.contains("Result of bisimulation check: true")){
 
@@ -108,6 +146,12 @@ public class ProcessTask implements Runnable {
             stdInput.close();
             this.latch.countDown();
         }catch (InterruptedException | IOException e) {
+
+            String[] error= new String[1];
+            error[0] = "Error: ".concat(this.automatonA).concat(" ").concat(this.automatonB);
+            System.out.println(error[0]);
+            this.writeFileLog(error);
+            this.latch.countDown();
             e.printStackTrace();
         }
 

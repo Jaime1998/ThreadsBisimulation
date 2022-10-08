@@ -15,10 +15,11 @@ public class MainThreads {
 
         ThreadPoolExecutor executor = (ThreadPoolExecutor)Executors.newFixedThreadPool(nThreads);
 
-        String saveFile = "TramBisimUniform.csv";
+        String saveFile = "C:\\Users\\Jaime\\Desktop\\CombineSmallBisimReportImplThesis3Try.csv";
+        String saveFileLog = "C:\\Users\\Jaime\\Desktop\\CombineSmallBisimReportImplThesis3TryLog.csv";
 
         //File file = new File("C:\\Users\\Jaime\\OneDrive - correounivalle.edu.co\\Documentos\\Github\\TranslationTraceUppaal\\Train-Gate-Controller\\mutantsUniform");
-        File file = new File("C:\\Users\\Jaime\\Desktop\\Uniform");
+        File file = new File("C:\\Users\\Jaime\\Desktop\\timJames\\CombineSmall\\MutantsNoSpaces");
         final String[] pathnames = file.list();
 
         String pathFolder = file.getAbsolutePath();
@@ -36,7 +37,7 @@ public class MainThreads {
             for(int j=i+1; j<n; j++){
                 ProcessTask processTask = null;
                 try {
-                    processTask = new ProcessTask(bisimilarList, pathFolder, pathnames[i], pathnames[j], saveFile, latch);
+                    processTask = new ProcessTask(bisimilarList, pathFolder, pathnames[i], pathnames[j], saveFile, saveFileLog, latch);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
